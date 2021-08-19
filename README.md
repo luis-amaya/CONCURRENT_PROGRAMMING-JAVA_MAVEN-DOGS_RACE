@@ -64,3 +64,18 @@ Parte III
     deberían dormirse, y cuando se haga clic en ‘Continue’ los mismos
     deberían despertarse y continuar con la carrera. Diseñe una solución que permita hacer esto utilizando los mecanismos de sincronización con las primitivas de los Locks provistos por el lenguaje (wait y notifyAll).
 
+# Desarrollo
+
+## Parte 1
+
+### 1. Ejecucion del programa con un único hilo.
+
+![](.\img\solve\Prime-SingleThread-NumberOfCores.PNG)
+![](.\img\solve\Prime-SingleThread-NumberOfCores_Threads.PNG)
+
+Al ver la ejecución del programa "Primos concurrentes" mediante el uso del administrador de tareas, se observa un aumento en el uso de la cpu, pero este uso se extiende a todos los procesadores logicos, dificultando el reconocer cuantos nucleos se estan utilizando concretamente debido.
+Haciendo uso del JVisualVM, se puede observar que se hace uso de un hilo.
+
+### 2. Ejecucion con tres hilos.
+
+
