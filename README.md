@@ -78,4 +78,14 @@ Haciendo uso del JVisualVM, se puede observar que se hace uso de un hilo.
 
 ### 2. Ejecucion con tres hilos.
 
+![](.\img\solve\Prime-TripeThread-NumberOfCores-Code.png)
+![](.\img\solve\Prime-TripleThread-NumberOfCores.PNG)
+![](.\img\solve\Prime-TripleThread-NumberOfCores_Threads.PNG)
+
+Como se puede ver en la imagen del administrador de tareas nuevamente la ejecucion se distribuye entre todos los procesadores logicos, pero de acuerdo con JVisualVM se utilizan 3 hilos de ejecucion. Por tanto se asume que se utilizaron 3 procesadores logicos
+
+### 3. Modificación de 5 segundos
+
+![](.\img\solve\Prime-TripeThread-5SecondsWait-Code.png)
+![](.\img\solve\Prime-SingleThread-5SecondWait-Working.PNG)
 
