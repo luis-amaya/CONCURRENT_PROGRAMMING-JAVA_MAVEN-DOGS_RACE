@@ -119,6 +119,6 @@ Como es posible ver en las imagenes luego de 5 segundos se muestra en pantalla e
 
 ### 4. Implementacion de pausa y continuar.
 
-![](./img/solve/Part2.4-Solve-Proof1.PNG)
-![](./img/solve/Part2.4-Solve-Proof2.PNG)
-![](./img/solve/Part2.4-Solve-Proof3.PNG)
+![](./img/solve/Part2.4-Proof1.PNG)
+![](./img/solve/Part2.4-Proof2.PNG)
+![](./img/solve/Part2.4-Proof3.PNG)
