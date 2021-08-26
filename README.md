@@ -96,6 +96,12 @@ Como es posible ver en las imagenes luego de 5 segundos se muestra en pantalla e
 
 ### 1. Corrección de la aplicación
 
+2. Una vez corregido el problema inicial, corra la aplicación varias veces, e identifique las inconsistencias en los resultados de las mismas viendo el ‘ranking’ mostrado en consola (algunas veces podrían salir resultados válidos, pero en otros se pueden presentar dichas inconsistencias). A partir de esto, identifique las regiones críticas () del programa.
+
+- Acá nos damos cuenta que el programa ya dice quién es el ganador al final y da las posiciones de todos los galgos, pero el problema es que las posiciones de los galgos se repiten.
+
+![](./img/solve/Parte2.1.PNG)
+![](./img/solve/Parte2.1-2.PNG)
 
 ### 2. Identificacion de consistencias y regiones críticas
 
@@ -104,12 +110,3 @@ Como es posible ver en las imagenes luego de 5 segundos se muestra en pantalla e
 
 
 ### 4. Implementacion de pausa y continuar.
-
-## Parte 3
-
-2. Una vez corregido el problema inicial, corra la aplicación varias veces, e identifique las inconsistencias en los resultados de las mismas viendo el ‘ranking’ mostrado en consola (algunas veces podrían salir resultados válidos, pero en otros se pueden presentar dichas inconsistencias). A partir de esto, identifique las regiones críticas () del programa.
-
-- Acá nos damos cuenta que el programa ya dice quién es el ganador al final y da las posiciones de todos los galgos, pero el problema es que las posiciones de los galgos se repiten.
-
-![](./img/solve/Parte2.1.PNG)
-![](./img/solve/Parte2.1-2.PNG)
