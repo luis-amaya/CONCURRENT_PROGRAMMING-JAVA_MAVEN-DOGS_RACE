@@ -103,6 +103,7 @@ Como es posible ver en las imagenes luego de 5 segundos se muestra en pantalla e
 
 ### 2. Identificacion de consistencias y regiones críticas
 
+- Nosotros identificamos que la variable ultimaPosicionAlcanzada es un
 
 ### 3. Uso de mecanismo de sincronización para el acceso a regiones críticas
 
