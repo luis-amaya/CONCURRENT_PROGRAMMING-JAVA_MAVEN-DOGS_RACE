@@ -100,8 +100,8 @@ Como es posible ver en las imagenes luego de 5 segundos se muestra en pantalla e
 
 - Acá nos damos cuenta que el programa ya dice quién es el ganador al final y da las posiciones de todos los galgos, pero el problema es que las posiciones de los galgos se repiten.
 
-![](./img/solve/Parte2.1.PNG)
-![](./img/solve/Parte2.1-2.PNG)
+![](./img/solve/Part2.1.PNG)
+![](./img/solve/Part2.1-2.PNG)
 
 ### 2. Identificacion de consistencias y regiones críticas
 
