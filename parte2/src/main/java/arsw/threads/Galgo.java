@@ -21,24 +21,25 @@ public class Galgo extends Thread {
 
 	public void corra() throws InterruptedException {
 		while (paso < carril.size()) {
-			Thread.sleep(100);
 			synchronized (this) {
 				while (stop) {
 					this.wait();
 				}
 			}
+			Thread.sleep(100);
 			carril.setPasoOn(paso++);
 			carril.displayPasos(paso);
 
 			if (paso == carril.size()) {
-				carril.finish();
-				int ubicacion = regl.getUltimaPosicionAlcanzada();
-				regl.setUltimaPosicionAlcanzada(ubicacion + 1);
-				System.out.println("El galgo " + this.getName() + " llego en la posicion " + ubicacion);
-				if (ubicacion == 1) {
-					regl.setGanador(this.getName());
+				synchronized (regl) {
+					carril.finish();
+					int ubicacion = regl.getUltimaPosicionAlcanzada();
+					regl.setUltimaPosicionAlcanzada(ubicacion + 1);
+					System.out.println("El galgo " + this.getName() + " llego en la posicion " + ubicacion);
+					if (ubicacion == 1) {
+						regl.setGanador(this.getName());
+					}
 				}
-
 			}
 		}
 	}
