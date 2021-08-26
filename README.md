@@ -103,7 +103,9 @@ Como es posible ver en las imagenes luego de 5 segundos se muestra en pantalla e
 
 ### 2. Identificacion de consistencias y regiones críticas
 
-- Nosotros identificamos que la variable ultimaPosicionAlcanzada es un
+- Nosotros identificamos que la variable ultimaPosicionAlcanzada es una región crítica, ya que muchos hilos pueden acceder al valor de esta variable y por lo tanto van a tener al final el mismo valor y puede que este no sea el correcto según el orden en que se van ejecutando durante el programa.
+
+![](./img/solve/Part2.2-criticRegion.png)
 
 ### 3. Uso de mecanismo de sincronización para el acceso a regiones críticas
 
