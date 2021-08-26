@@ -18,53 +18,54 @@ public class MainCanodromo {
         galgos = new Galgo[can.getNumCarriles()];
         can.setVisible(true);
 
-        //Acción del botón start
-        can.setStartAction(
-                new ActionListener() {
+        // Acción del botón start
+        can.setStartAction(new ActionListener() {
 
-                    @Override
-                    public void actionPerformed(final ActionEvent e) {
-						//como acción, se crea un nuevo hilo que cree los hilos
-                        //'galgos', los pone a correr, y luego muestra los resultados.
-                        //La acción del botón se realiza en un hilo aparte para evitar
-                        //bloquear la interfaz gráfica.
-                        ((JButton) e.getSource()).setEnabled(false);
-                        new Thread() {
-                            public void run() {
-                                for (int i = 0; i < can.getNumCarriles(); i++) {
-                                    //crea los hilos 'galgos'
-                                    galgos[i] = new Galgo(can.getCarril(i), "" + i, reg);
-                                    //inicia los hilos
-                                    galgos[i].start();
+            @Override
+            public void actionPerformed(final ActionEvent e) {
+                // como acción, se crea un nuevo hilo que cree los hilos
+                // 'galgos', los pone a correr, y luego muestra los resultados.
+                // La acción del botón se realiza en un hilo aparte para evitar
+                // bloquear la interfaz gráfica.
+                ((JButton) e.getSource()).setEnabled(false);
+                new Thread() {
+                    public void run() {
+                        for (int i = 0; i < can.getNumCarriles(); i++) {
+                            // crea los hilos 'galgos'
+                            galgos[i] = new Galgo(can.getCarril(i), "" + i, reg);
+                            // inicia los hilos
+                            galgos[i].start();
+                        }
 
-                                }
-                               
-				can.winnerDialog(reg.getGanador(),reg.getUltimaPosicionAlcanzada() - 1); 
-                                System.out.println("El ganador fue:" + reg.getGanador());
+                        for (int i = 0; i < can.getNumCarriles(); i++) {
+                            try {
+                                galgos[i].join();
+                            } catch (Exception e) {
+                                System.out.println(e.getMessage());
                             }
-                        }.start();
+                        }
 
+                        can.winnerDialog(reg.getGanador(), reg.getUltimaPosicionAlcanzada() - 1);
+                        System.out.println("El ganador fue:" + reg.getGanador());
                     }
-                }
-        );
+                }.start();
 
-        can.setStopAction(
-                new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        System.out.println("Carrera pausada!");
-                    }
-                }
-        );
+            }
+        });
 
-        can.setContinueAction(
-                new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        System.out.println("Carrera reanudada!");
-                    }
-                }
-        );
+        can.setStopAction(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Carrera pausada!");
+            }
+        });
+
+        can.setContinueAction(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Carrera reanudada!");
+            }
+        });
 
     }
 

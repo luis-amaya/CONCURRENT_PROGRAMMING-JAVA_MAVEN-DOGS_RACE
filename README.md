@@ -86,6 +86,22 @@ Como se puede ver en la imagen del administrador de tareas nuevamente la ejecuci
 
 ### 3. Modificación de 5 segundos
 
+Como es posible ver en las imagenes luego de 5 segundos se muestra en pantalla el numero de primos encontrados y espera a un enter para continuar.
+
 ![](.\img\solve\Prime-TripeThread-5SecondsWait-Code.png)
 ![](.\img\solve\Prime-SingleThread-5SecondWait-Working.PNG)
+
+## Parte 2 y 3
+
+
+### 1. Corrección de la aplicación
+
+
+### 2. Identificacion de consistencias y regiones críticas
+
+
+### 3. Uso de mecanismo de sincronización para el acceso a regiones críticas
+
+
+### 4. Implementacion de pausa y continuar.
 
