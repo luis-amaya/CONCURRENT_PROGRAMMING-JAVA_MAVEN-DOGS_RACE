@@ -109,5 +109,12 @@ Como es posible ver en las imagenes luego de 5 segundos se muestra en pantalla e
 
 ### 3. Uso de mecanismo de sincronización para el acceso a regiones críticas
 
+![](./img/solve/Part2.3 Solve 1.png)
+![](./img/solve/Part2.3 Solve 2.png)
+![](./img/solve/Part2.3 Solve 3.png)
+
+
+![](./img/solve/Part2.3 Solve - proof1.PNG)
+![](./img/solve/Part2.3 Solve - proof2.PNG)
 
 ### 4. Implementacion de pausa y continuar.
