@@ -1,11 +1,13 @@
 package arsw.threads;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class RegistroLlegada {
 
-	private int ultimaPosicionAlcanzada=1;
+	private AtomicInteger ultimaPosicionAlcanzada = new AtomicInteger(1);
 
-	private String ganador=null;
-	
+	private String ganador = null;
+
 	public String getGanador() {
 		return ganador;
 	}
@@ -15,13 +17,12 @@ public class RegistroLlegada {
 	}
 
 	public int getUltimaPosicionAlcanzada() {
-		return ultimaPosicionAlcanzada;
+		return ultimaPosicionAlcanzada.get();
 	}
 
-	public void setUltimaPosicionAlcanzada(int ultimaPosicionAlcanzada) {
-		this.ultimaPosicionAlcanzada = ultimaPosicionAlcanzada;
+	synchronized void setUltimaPosicionAlcanzada(int ultimaPosicionAlcanzada) {
+		this.ultimaPosicionAlcanzada.set(ultimaPosicionAlcanzada);
+		;
 	}
 
-	
-	
 }
