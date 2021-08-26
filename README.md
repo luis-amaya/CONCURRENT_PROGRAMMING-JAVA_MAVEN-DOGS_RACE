@@ -110,7 +110,7 @@ Como es posible ver en las imagenes luego de 5 segundos se muestra en pantalla e
 ### 3. Uso de mecanismo de sincronización para el acceso a regiones críticas
 
 ![](./img/solve/Part2.3-Solve1.png)
-![](./img/solve/Part2.3-Solve 2.png)
+![](./img/solve/Part2.3-Solve2.png)
 ![](./img/solve/Part2.3-Solve3.png)
 
 
