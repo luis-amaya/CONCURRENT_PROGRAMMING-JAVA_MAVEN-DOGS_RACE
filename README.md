@@ -89,3 +89,10 @@ Como se puede ver en la imagen del administrador de tareas nuevamente la ejecuci
 ![](./img/solve/Prime-TripeThread-5SecondsWait-Code.png)
 ![](./img/solve/Prime-SingleThread-5SecondWait-Working.PNG)
 
+## Parte 3
+
+2. Una vez corregido el problema inicial, corra la aplicación varias veces, e identifique las inconsistencias en los resultados de las mismas viendo el ‘ranking’ mostrado en consola (algunas veces podrían salir resultados válidos, pero en otros se pueden presentar dichas inconsistencias). A partir de esto, identifique las regiones críticas () del programa.
+
+- Acá nos damos cuenta que el programa ya dice quién es el ganador al final y da las posiciones de todos los galgos, pero el problema es que las posiciones de los galgos se repiten.
+
+
